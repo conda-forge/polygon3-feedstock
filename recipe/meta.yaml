@@ -11,18 +11,18 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - numpy
     - pip
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:

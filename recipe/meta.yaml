@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Polygon3-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Polygon3-{{ version }}.tar.gz
   sha256: 2ddf8d06975f728d5b40786136c82e5b9d38a846bce236b7e6587bbd6a5e9b49
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
     - python
     - numpy
     - pip
+    - setuptools
   run:
     - python
 
